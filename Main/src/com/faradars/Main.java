@@ -44,19 +44,19 @@ class Main {
         System.out.printf("=============================================%n");
 
 
-        int j = 0;
-        int sumBenz = 0;
+        int jParam = 0;
+        int _yas = 0;
         int sumFerrari = 0;
         for (int i = 1; i <= startingCarOnTrack; i++) {
-            j++;
+            jParam++;
             ICar car = track.startRace();
 
             double speedOnTrack = calcSpeed.getSpeed(car, track);
             if (car.getName() == "Benz   ") {
-                System.out.printf("%s %d: %s Speed Km/h%n", car.getName(), j, (int) speedOnTrack);
-                sumBenz += (int) speedOnTrack;
+                System.out.printf("%s %d: %s Speed Km/h%n", car.getName(), jParam, (int) speedOnTrack);
+                _yas += (int) speedOnTrack;
             } else {
-                System.out.printf("%s %d: %s Speed km/h%n", car.getName(), --j, (int) speedOnTrack);
+                System.out.printf("%s %d: %s Speed km/h%n", car.getName(), --jParam, (int) speedOnTrack);
                 sumFerrari += (int) speedOnTrack;
             }
         }
@@ -65,12 +65,12 @@ class Main {
         System.out.printf("Race End of Cars on Track: %d%n", track.getCarOnTrack());
         System.out.printf("=============================================%n");
 
-        if (sumBenz > sumFerrari) {
-            System.out.printf("Avrage Speed Benz  %d  Ferrari %d, Team Benz Win....%n", sumBenz / 4, sumFerrari / 4);
-        } else if (sumBenz < sumFerrari) {
-            System.out.printf("Avrage Speed Benz  %d  Ferrari %d, Team Ferrari Win....%n", sumBenz / 4, sumFerrari / 4);
+        if (_yas > sumFerrari) {
+            System.out.printf("Avrage Speed Benz  %d  Ferrari %d, Team Benz Win....%n", _yas / 4, sumFerrari / 4);
+        } else if (_yas < sumFerrari) {
+            System.out.printf("Avrage Speed Benz  %d  Ferrari %d, Team Ferrari Win....%n", _yas / 4, sumFerrari / 4);
         } else {
-            System.out.printf("Avrage Speed Benz  %d  Ferrari %d, Two teams equal ....%n", sumBenz / 4, sumFerrari / 4);
+            System.out.printf("Avrage Speed Benz  %d  Ferrari %d, Two teams equal ....%n", _yas / 4, sumFerrari / 4);
         }
     }
 }
