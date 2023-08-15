@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="RacingCar:jar2">
+    <output-path>$PROJECT_DIR$/out/artifacts/RacingCar_jar2</output-path>
+    <root id="archive" name="RacingCar.jar">
+      <element id="module-output" name="RacingCar" />
+      <element id="module-output" name="Helper" />
+    </root>
+  </artifact>
+</component>
